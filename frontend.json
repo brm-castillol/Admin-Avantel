@@ -1,0 +1,10 @@
+{
+  "name": "cms-Avantel",
+  "title": "CMS Avantel",
+  "description": "Administrador Sitio Avantel.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Checha",
+    "email": "esteffany.castillo@brm.com.co"
+  }
+}

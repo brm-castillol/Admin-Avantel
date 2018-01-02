@@ -1,0 +1,145 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var interna = "Planes";
+	title Ejemplo de meta title
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Frontend BRM" )
+
+
+block content
+	section.container-fluid
+		div.row
+			include ../templates/partials/menu.pug
+
+
+	section.container-fluid.alto-page
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+		//-Contenedor
+		div.row
+			//-Titulos
+			article.col-general
+				div.cont-titulos-generales
+					h4 planes
+
+				//-Contenido
+				div.cont-contenido-detalle
+
+					//-Planes
+
+					div.col-cont-planes.primer-plan
+						p.titulo-numero-destacado 1 Destacado
+
+						div.cont-info-destacado
+							h4.titulo-nombre-destacado Plan ilimitado pospago
+
+							table.cont-detalle-destacado
+								tbody
+									tr
+										td.text-cantidad-detalle 99999
+										td.text-tipo-detalle minutos
+									tr
+										td.text-cantidad-detalle 2.5
+										td.text-tipo-detalle gb
+									tr
+										td.text-cantidad-detalle prepago
+										td.text-tipo-detalle sms
+
+							p.text-descrip-detalle Chat de whatsapp y waze ilimitados
+
+							div.cont-valor-plan
+								em.titulo-valor-plan valor plan
+
+								h5.text-valor-plan $999.999
+
+							button.btn-xl.btn-general(type="submit")
+								|link al plan
+
+						div.cont-destacar-plan
+							a.btn-destacar
+								span.glyphicon.glyphicon-star
+								p.text-destacar Destacar
+
+					div.col-cont-planes
+						p.titulo-numero-destacado 2 Destacado
+
+						div.cont-info-destacado
+							h4.titulo-nombre-destacado pLAN DIVIERTETE
+
+							table.cont-detalle-destacado
+								tbody
+									tr
+										td.text-cantidad-detalle 99999
+										td.text-tipo-detalle minutos
+									tr
+										td.text-cantidad-detalle 2.5
+										td.text-tipo-detalle gb
+									tr
+										td.text-cantidad-detalle prepago
+										td.text-tipo-detalle sms
+
+							p.text-descrip-detalle Chat de whatsapp y waze ilimitados
+
+							div.cont-valor-plan
+								em.titulo-valor-plan valor plan
+
+								h5.text-valor-plan $999.999
+
+							button.btn-xl.btn-general(type="submit")
+								|link al plan
+
+						div.cont-destacar-plan
+							a.btn-destacar
+								span.glyphicon.glyphicon-star
+								p.text-destacar Destacar
+
+					div.col-cont-planes
+						p.titulo-numero-destacado 3 Destacado
+
+						div.cont-info-destacado
+							h4.titulo-nombre-destacado pLAN DIVIERTETE
+
+							table.cont-detalle-destacado
+								tbody
+									tr
+										td.text-cantidad-detalle 99999
+										td.text-tipo-detalle minutos
+									tr
+										td.text-cantidad-detalle 2.5
+										td.text-tipo-detalle gb
+									tr
+										td.text-cantidad-detalle prepago
+										td.text-tipo-detalle sms
+
+							p.text-descrip-detalle Chat de whatsapp y waze ilimitados
+
+							div.cont-valor-plan
+								em.titulo-valor-plan valor plan
+
+								h5.text-valor-plan $999.999
+
+							button.btn-xl.btn-general(type="submit")
+								|link al plan
+
+						div.cont-destacar-plan
+							a.btn-destacar
+								span.glyphicon.glyphicon-star
+								p.text-destacar Destacar
+					
+				//-Volver
+		div.row
+			div.cont-btn-volver
+				a(href="index.html").btn-volver-general
+					span.glyphicon.glyphicon-chevron-left
+					</br>volver
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

@@ -1,0 +1,78 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	title Ejemplo de meta title
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Frontend BRM" )
+
+
+block content
+	section.container-fluid
+		div.row
+			include ../templates/partials/menu.pug
+
+
+	section.container-fluid.alto-page
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+		//-Contenedor
+		div.row
+			//-Titulos
+			article.col-general
+				div.cont-titulos-generales
+					h4 editar sección
+
+				//-Contenido
+				div.cont-contenido-detalle
+
+					//-Formulario
+					form.col-contenido-doble(method="POST")
+						div.col-form-doble
+							div.col-form-user
+								div.form-group
+									input(type="text" required)
+									label(for="ruta")
+										|Ruta
+
+							div.col-form-user
+								div.form-group
+									input(type="text" required)
+									label(for="descripcion")
+										|Descripción
+
+						div.col-form-doble
+							div.col-form-user
+								div.form-group
+									input(type="text" required)
+									label(for="titulo")
+										|Titulo
+
+							div.col-form-user
+								div.cont-select.form-group
+									select(for="estado")
+										option(value="" disabled selected) Estado
+										option(value="1") 002
+										option(value="2") 003
+										option(value="3") 004
+										option(value="4") 005
+					
+						//-boton
+						button.col-btn-user.btn-general(type="submit")
+								|editar sección
+		
+				//-Volver
+		div.row
+			div.cont-btn-volver
+				a(href="secciones.html").btn-volver-general
+					span.glyphicon.glyphicon-chevron-left
+					</br>volver
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

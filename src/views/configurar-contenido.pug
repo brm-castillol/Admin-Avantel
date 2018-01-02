@@ -1,0 +1,50 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	title Ejemplo de meta title
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Frontend BRM" )
+
+
+block content
+	section.container-fluid
+		div.row
+			include ../templates/partials/menu.pug
+
+
+	section.container-fluid.alto-page
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+		//-Contenedor
+		div.row
+			//-Titulos
+			article.col-general
+				div.cont-titulos-generales
+					h4 Configurar contenido
+
+				//-Contenido
+				div.col-editor-text
+
+					div#div
+						textarea
+							|Holiiii Editame :P
+						
+
+		
+				//-Volver
+		div.row
+			div.cont-btn-volver
+				a(href="modulos.html").btn-volver-general
+					span.glyphicon.glyphicon-chevron-left
+					</br>volver
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+	script(src='js/nicEdit.js')
+

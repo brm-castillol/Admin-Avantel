@@ -1,0 +1,87 @@
+form
+	margin-top 10px
+	
+.form-group
+	position relative
+
+.col-form-login
+	margin-bottom 10px
+	
+input
+	gradient-vertical($blanco, $magenta, 0, 100%) 
+	background-position -500px bottom
+	background-repeat no-repeat
+	background-size 100% 2px
+	border none
+	border-bottom 1px solid $grisclaro
+	color $gris
+	display block
+	padding 10px
+	transition all 0.4s cubic-bezier(.64,.09,.08,1)
+	width 100%
+
+	&:focus		
+		background-position 0 bottom
+		box-shadow none
+		outline 0 !important
+		outline none 0 !important
+		z-index 1
+	
+	&:focus ~ label,
+	&:valid ~ label
+		color $gris
+		font-size 1.3rem
+		top -13px
+label
+	color $grisclaro
+	font-family $hair
+	font-size 1.5rem	
+	position absolute
+	top 13px
+	transition 0.4s ease all
+
+/*Link olvide datos*/
+div.conte-text-olvide
+	margin-top 20px
+	text-align center
+	
+	a
+		color $agua
+		font-family $regular
+		font-size 1.4rem
+		text-decoration underline
+		
+		&:hover
+			color $azul
+
+select
+	background-color transparent
+	border none
+	border-bottom 1px solid $grisclaro
+	color $gris
+	padding 13px 0 7px 0
+	width 100%
+	
+	&:focus
+		outline 0
+	
+	&:after
+			position absolute
+		    border-left .25em solid transparent
+		    border-right .25em solid transparent
+		    border-top .375em solid $negro
+		    content ''
+		    height 0
+		    padding 0
+		    pointer-events none	
+		    right 0.5em
+		    top 0.75em
+		    width 0
+			
+.cont-select
+	position relative
+	
+	        
+	select
+		appearance none
+			

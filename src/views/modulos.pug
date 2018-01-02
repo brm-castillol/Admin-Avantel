@@ -1,0 +1,97 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var interna = 'modulos';
+	title Ejemplo de meta title
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Frontend BRM" )
+
+
+block content
+	section.container-fluid
+		div.row
+			include ../templates/partials/menu.pug
+
+
+	section.container-fluid.alto-page
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+		//-Contenedor
+		div.row
+			//-Titulos
+			article.col-general
+				div.cont-titulos-generales
+					h4 módulos
+
+				//-Contenido
+				div.cont-contenido-detalle
+					table.table.col-cont-listas-cortas.listas-modulos
+						thead
+							tr
+								th
+									|Nombre	
+								th
+									|Estado
+
+								th.accion-corta
+									|Acción
+								
+						
+						tbody
+							tr
+								td
+									|Jbarrera	
+								td
+									|Julian
+								td.accion-corta
+									div.cont-iconos-accion
+										a
+											span.glyphicon.glyphicon-cog
+										a
+											span.glyphicon.glyphicon-trash
+										a(href="editar-modulo.html")
+											span.glyphicon.glyphicon-pencil
+
+							tr
+								td
+									|Jbarrera	
+								td
+									|Julian
+								td.accion-corta
+									div.cont-iconos-accion
+										a
+											span.glyphicon.glyphicon-trash
+										a(href="editar-modulo.html")
+											span.glyphicon.glyphicon-pencil
+
+				div.clear
+				div.cont-btns-general
+					div.cont-btn-guardar.col-btn-static
+						a.btn-guardar-general
+							span.glyphicon.glyphicon-floppy-disk
+							</br>guardar
+
+					div.cont-btn-crear
+						a(href="crear-modulo.html").btn-crear-general
+							span.glyphicon.glyphicon-plus
+							</br>Crear módulos
+
+
+
+		
+				//-Volver
+		div.row
+			div.cont-btn-volver
+				a(href="index.html").btn-volver-general
+					span.glyphicon.glyphicon-chevron-left
+					</br>volver
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

@@ -1,0 +1,26 @@
+//Footer
+
+footer.container-fluid
+	div.row
+		div.col-lg-12
+			img(src="images/love-brm.png", alt="withloveBRM", title="withloveBRM")
+
+
+///-Footer
+
+//Scripts
+//-Estos son los scripts que van en todos los htmls del desarrollo
+
+	//-script(type="text/javascript")
+		| bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+
+
+
+if debug == true
+	script(src='js/libs/jquery.js')
+	script(src='js/libs/bootstrap.min.js')
+	script(src='js/libs/tinymce/tinymce.min.js')
+
+else
+	script(src='js/libs/jquery.js')
+	script(src="js/libs.min.js")

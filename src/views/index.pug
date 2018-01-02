@@ -1,0 +1,57 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	title Ejemplo de meta title
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Frontend BRM" )
+
+
+block content
+	
+	section#inter-login.container-fluid.alto-page
+		
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+
+		div.row
+					
+			//-Conte-opciones
+			div.col-dashboard-admin
+				ul#menu-dashboard.cont-menu-admin
+					li
+						a(href="usuarios.html")
+							span.glyphicon.glyphicon-user
+							</br>Usuarios
+					li
+						a(href="modulos.html")
+							span.glyphicon.glyphicon-envelope
+							</br>Módulos
+					li
+						a(href="menu.html")
+							span.glyphicon.glyphicon-menu-hamburger
+							</br>Menú
+					li
+						a(href="contenidos.html")
+							span.glyphicon.glyphicon-list-alt
+							</br>Contenidos
+					li
+						a(href="archivos.html")
+							span.glyphicon.glyphicon-inbox
+							</br>Archivos
+
+					li
+						a(href="secciones.html")
+							span.glyphicon.glyphicon-th-list
+							</br>Sección
+
+	div.clear
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

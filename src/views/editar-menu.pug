@@ -1,0 +1,300 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	title Ejemplo de meta title
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Frontend BRM" )
+
+
+block content
+	section.container-fluid
+		div.row
+			include ../templates/partials/menu.pug
+
+
+	section.container-fluid.alto-page
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+		//-Contenedor
+		div.row
+			//-Titulos
+			article.col-general
+				div.cont-titulos-generales
+					h4 Editar menú
+
+				//-Contenido
+				div.cont-contenido-detalle
+
+					div.col-contenido
+						form(method="POST")
+							div.form-group.cont-form-nombre
+								input(type="text" required)
+								label(for="nombre-menu")
+									|Nombre
+					div.clearfix
+
+					//-NIVEL-1
+					div.col-menu-nivel.offset-3-col
+						h5.titulo-nivel Nivel 1
+						
+						form(method="POST")
+							div.cont-menu-nivel.grupo-1
+								div.form-group
+									input(type="text" required)
+									label(for="texto-menu")
+										|Texto
+
+								div.form-group
+									input(type="text" required)
+									label(for="url-menu")
+										|Url
+								
+								div.form-group
+									input(type="text" required)
+									label(for="posicion-banner")
+										|Posición
+
+								div.cont-btns-menu-interno
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-trash
+
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-pencil
+
+							div.cont-menu-nivel.grupo-2
+								div.form-group
+									input(type="text" required)
+									label(for="texto-menu")
+										|Texto
+
+								div.form-group
+									input(type="text" required)
+									label(for="url-menu")
+										|Url
+								
+								div.form-group
+									input(type="text" required)
+									label(for="posicion-menu")
+										|Posición
+
+								div.cont-btns-menu-interno
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-trash
+
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-pencil
+							
+							div.cont-menu-nivel.grupo-3
+								div.form-group
+									input(type="text" required)
+									label(for="texto-menu")
+										|Texto
+
+								div.form-group
+									input(type="text" required)
+									label(for="url-menu")
+										|Url
+								
+								div.form-group
+									input(type="text" required)
+									label(for="posicion-menu")
+										|Posición
+
+								div.cont-btns-menu-interno
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-trash
+
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-pencil
+					
+					//-NIVEL-2
+					div.col-menu-nivel
+						h5.titulo-nivel Nivel 2
+						
+						form(method="POST")
+							div.cont-menu-nivel.grupo-1
+								div.form-group
+									input(type="text" required)
+									label(for="texto-menu")
+										|Texto
+
+								div.form-group
+									input(type="text" required)
+									label(for="url-menu")
+										|Url
+								
+								div.form-group
+									input(type="text" required)
+									label(for="posicion-menu")
+										|Posición
+
+								div.cont-btns-menu-interno
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-trash
+
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-pencil
+
+						form(method="POST")
+							div.cont-menu-nivel.grupo-1
+								div.form-group
+									input(type="text" required)
+									label(for="texto-menu")
+										|Texto
+
+								div.form-group
+									input(type="text" required)
+									label(for="url-menu")
+										|Url
+								
+								div.form-group
+									input(type="text" required)
+									label(for="posicion-menu")
+										|Posición
+
+								div.cont-btns-menu-interno
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-trash
+
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-pencil
+
+							div.cont-menu-nivel.grupo-2
+								div.form-group
+									input(type="text" required)
+									label(for="texto-menu")
+										|Texto
+
+								div.form-group
+									input(type="text" required)
+									label(for="url-menu")
+										|Url
+								
+								div.form-group
+									input(type="text" required)
+									label(for="posicion-menu")
+										|Posición
+
+								div.cont-btns-menu-interno
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-trash
+
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-pencil
+
+							div.cont-menu-nivel.grupo-3
+								div.form-group
+									input(type="text" required)
+									label(for="texto-menu")
+										|Texto
+
+								div.form-group
+									input(type="text" required)
+									label(for="url-menu")
+										|Url
+								
+								div.form-group
+									input(type="text" required)
+									label(for="posicion-menu")
+										|Posición
+
+								div.cont-btns-menu-interno
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-trash
+
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-pencil
+
+						
+		
+					//-NIVEL-3
+					div.col-menu-nivel
+						h5.titulo-nivel Nivel 3
+						
+						form(method="POST")
+							div.cont-menu-nivel.grupo-1
+								div.form-group
+									input(type="text" required)
+									label(for="texto-menu")
+										|Texto
+
+								div.form-group
+									input(type="text" required)
+									label(for="url-menu")
+										|Url
+								
+								div.form-group
+									input(type="text" required)
+									label(for="posicion-menu")
+										|Posición
+
+								div.cont-btns-menu-interno
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-trash
+
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-pencil
+
+							div.cont-menu-nivel.grupo-3
+								div.form-group
+									input(type="text" required)
+									label(for="texto-menu")
+										|Texto
+
+								div.form-group
+									input(type="text" required)
+									label(for="url-menu")
+										|Url
+								
+								div.form-group
+									input(type="text" required)
+									label(for="posicion-menu")
+										|Posición
+
+								div.cont-btns-menu-interno
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-trash
+
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-pencil
+
+							div.cont-menu-nivel.grupo-3
+								div.form-group
+									input(type="text" required)
+									label(for="texto-menu")
+										|Texto
+
+								div.form-group
+									input(type="text" required)
+									label(for="url-menu")
+										|Url
+								
+								div.form-group
+									input(type="text" required)
+									label(for="posicion-menu")
+										|Posición
+
+								div.cont-btns-menu-interno
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-trash
+
+									a(href="#").cont-icons-config
+										span.glyphicon.glyphicon-pencil
+
+		
+				//-Volver
+		div.row
+			div.cont-btn-volver
+				a(href="modulos.html").btn-volver-general
+					span.glyphicon.glyphicon-chevron-left
+					</br>volver
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

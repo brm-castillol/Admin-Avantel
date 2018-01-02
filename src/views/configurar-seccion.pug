@@ -1,0 +1,205 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	title Ejemplo de meta title
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Frontend BRM" )
+
+
+block content
+	section.container-fluid
+		div.row
+			include ../templates/partials/menu.pug
+
+
+	section.container-fluid.alto-page
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+		//-Contenedor
+		div.row-big
+			//-Titulos
+			article.col-general
+				div.cont-titulos-generales
+					h4 Configurar sección 
+
+				//-Contenido
+				div.cont-contenido-detalle
+					div.cont-titulo-seccion
+						h5.nombre-seccion PLANES Lorem ipsum dolor
+						p.subtitulo-seccion NOMBRE SECCIÓN
+
+						div.cont-btn-guardar-config
+							a
+								span.glyphicon.glyphicon-floppy-disk
+								p guardar
+
+					div.col-list-secciones.first-list
+						p.titulo-edicion sección
+
+						div.cont-list-config
+							ul.list-config
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+
+					div.col-list-secciones
+						p.titulo-edicion sección
+
+						div.cont-list-config
+							ul.list-config
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+
+					div.col-list-secciones
+						p.titulo-edicion sección
+
+						div.cont-list-config
+							ul.list-config
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+
+					div.col-list-secciones
+						p.titulo-edicion sección
+
+						div.cont-list-config
+							ul.list-config
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.	
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+								li
+									p.text-nombre-edicion
+										| Lorem ipsum dolor sit amet.
+
+									a(href="")
+										span.glyphicon.glyphicon-remove
+
+
+
+
+
+
+
+
+					//-Formulario
+					
+		
+				//-Volver
+		div.row
+			div.cont-btn-volver
+				a(href="secciones.html").btn-volver-general
+					span.glyphicon.glyphicon-chevron-left
+					</br>volver
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

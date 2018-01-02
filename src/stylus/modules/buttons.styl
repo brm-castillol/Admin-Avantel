@@ -1,0 +1,174 @@
+/*TAMAÑOS*/
+.btn-xl
+	width 100%
+	margin 0 auto
+	
+/*Btn Cerrar Sesion*/
+.btn-cerrar-sesion
+	color $blanco
+	font-family $hair
+	text-align center
+	text-transform uppercase
+	
+	&:hover
+		color $magenta
+		text-decoration none
+	
+	p.icono-cerrar
+		border 3px solid $blanco
+		border-radius 100%
+		height 30px
+		margin 0 auto
+		position relative
+		width 30px
+	
+		&:hover
+			border-color $magenta
+		
+		span.glyphicon-remove
+			left 20%
+			top 18%
+		
+		.text-btn-cerrar
+			font-size 1rem
+
+/*Btn Editar-perfil*/
+
+a.btn-editar-perfil
+	color $gris
+	cursor pointer
+	
+	&:hover
+		color $magenta
+
+/*Btn Volver*/
+
+.cont-btn-volver
+	text-align center
+	
+	a.btn-volver-general
+		color $vino
+		cursor pointer
+		font-family $hair
+		text-transform uppercase
+		
+		span.glyphicon-chevron-left
+			color $vino
+			font-size 2rem
+		
+
+		&:hover
+			color $grisclaro
+			text-decoration none
+			
+			span
+				color $grisclaro
+
+
+/*Botones de accion tablas*/
+
+div.cont-iconos-accion, div.cont-iconos-accion-2
+	left 50%
+	margin 0
+	position absolute
+	transform translate3d(-50%,0,0)
+	width 50%
+	
+	a
+		cursor pointer
+		
+		span.glyphicon
+			display inline-block
+			float left
+			font-size 20px
+			height 20px
+			width 30px
+			
+			&.glyphicon-trash
+				color $vino
+			
+			&.glyphicon-pencil
+				color $azul
+			
+			&.glyphicon-cog
+				color $magenta
+				
+div.cont-iconos-accion-2
+	top 22%
+	left 60%
+
+
+/*Btns guardar - crear*/
+
+.cont-btns-general
+	margin-top 20px
+	width 100%
+				
+	.cont-btn-guardar, .cont-btn-crear
+		float left
+		text-align center
+		width 10%
+		
+	.cont-btn-guardar
+		border-right 1px solid $gris !important
+	a
+		cursor pointer
+		font-family $light
+		text-transform uppercase
+		font-size 1.2rem
+		
+		&.btn-guardar-general
+			color $gris
+		
+		&.btn-crear-general
+			color $azul
+			
+		&:hover
+			color $magenta
+			text-decoration none
+
+		span
+			font-size 2.5rem
+
+/*Btn negro*/
+.btn-general
+	background $negro
+	border none
+	color $blanco
+	font-family $bold
+	font-size 2rem
+	margin-top 20px
+	padding 10px 0
+	text-transform uppercase
+	transition 0.2s ease all
+	
+	&:hover
+		background $gris
+		box-shadow inset 5px 5px 0 $grisoscuro	
+		color $grisoscuro
+
+/*BTN GUARDAR LATERAL*/
+
+.cont-btn-guardar-config
+	float right
+	margin-top -56px
+	text-align center
+	
+	a
+		color $gris
+		text-decoration none
+		text-transform uppercase
+		
+		span
+			font-size 3rem
+
+
+/*CREAR MENU*/
+.btn-crear 
+	background $agua
+	border-radius 4px
+	color $blanco
+	font-size 2rem
+	padding 8px 6px 6px 8px
+
+	

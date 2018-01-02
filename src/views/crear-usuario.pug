@@ -1,0 +1,99 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	title Ejemplo de meta title
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Frontend BRM" )
+
+
+block content
+	section.container-fluid
+		div.row
+			include ../templates/partials/menu.pug
+
+
+	section.container-fluid.alto-page
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+		//-Contenedor
+		div.row
+			//-Titulos
+			article.col-general
+				div.cont-titulos-generales
+					h4 Crear usuario
+
+				//-Contenido
+				div.cont-contenido-detalle
+
+					//-Formulario
+					form.col-contenido-dobleform(method="POST")
+						div.col-form-doble
+							div.col-form-user
+								div.form-group
+									input(type="text" required)
+									label(for="usuario")
+										|Usuario
+
+							div.col-form-user
+								div.form-group
+									input(type="text" required)
+									label(for="correo")
+										|Correo
+
+							div.col-form-user
+								div.form-group
+									input(type="text" required)
+									label(for="nombre")
+										|Nombre
+
+							div.col-form-user
+								div.form-group
+									input(type="text" required)
+									label(for="apellido")
+										|Apellido
+
+						div.col-form-doble
+							div.col-form-user
+								div.form-group
+									input(type="text" required)
+									label(for="password")
+										|Contraseña
+
+							div.col-form-user
+								div.cont-select.form-group
+									select(for="perfil")
+										option(value="" disabled selected) Perfil
+										option(value="1") 002
+										option(value="2") 003
+										option(value="3") 004
+										option(value="4") 005
+
+							div.col-form-user
+								div.cont-select.form-group
+									select(for="estado")
+										option(value="" disabled selected) Estado
+										option(value="1") 002
+										option(value="2") 003
+										option(value="3") 004
+										option(value="4") 005
+					
+						//-boton
+						button.col-btn-user.btn-general(type="submit")
+								|crear usuario
+		
+				//-Volver
+		div.row
+			div.cont-btn-volver
+				a(href="usuarios.html").btn-volver-general
+					span.glyphicon.glyphicon-chevron-left
+					</br>volver
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

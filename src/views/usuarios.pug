@@ -1,0 +1,116 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var interna = 'usuarios';
+	title Ejemplo de meta title
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="Frontend BRM" )
+
+
+block content
+	section.container-fluid
+		div.row
+			include ../templates/partials/menu.pug
+
+
+	section.container-fluid.alto-page
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+		//-Contenedor
+		div.row
+			//-Titulos
+			article.col-general
+				div.cont-titulos-generales
+					h4 Usuarios
+
+				//-Contenido
+				div.cont-contenido-detalle
+					table.table.col-cont-listas.listas-usuarios
+						thead
+							tr
+								th
+									|Usuario	
+								th
+									|Nombre
+								th
+									|apellido
+								th
+									|correo
+								th
+									|perfil
+								th
+									|estado
+								th.accion-larga
+						
+						tbody
+							tr
+								td
+									|Jbarrera	
+								td
+									|Julian
+								td
+									|Barrera
+								td
+									|julian.barrera@brm.com.co
+								td
+									|Administrador
+								td
+									|A
+								td.accion-larga
+									div.cont-iconos-accion
+										a
+											span.glyphicon.glyphicon-trash
+										a(href="editar-usuario.html")
+											span.glyphicon.glyphicon-pencil
+
+							tr
+								td
+									|Jbarrera	
+								td
+									|Julian
+								td
+									|Barrera
+								td
+									|julian.barrera@brm.com.co
+								td
+									|Administrador
+								td
+									|A
+								td.accion-larga
+									div.cont-iconos-accion
+										a
+											span.glyphicon.glyphicon-trash
+										a(href="editar-usuario.html")
+											span.glyphicon.glyphicon-pencil
+
+				div.clear
+				div.cont-btns-general
+					div.cont-btn-guardar.col-btn-static
+						a.btn-guardar-general
+							span.glyphicon.glyphicon-floppy-disk
+							</br>guardar
+
+					div.cont-btn-crear
+						a(href="crear-usuario.html").btn-crear-general
+							span.glyphicon.glyphicon-plus
+							</br>Crear usuarios
+
+
+
+		
+				//-Volver
+		div.row
+			div.cont-btn-volver
+				a(href="index.html").btn-volver-general
+					span.glyphicon.glyphicon-chevron-left
+					</br>volver
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

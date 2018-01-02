@@ -1,0 +1,148 @@
+/*
+-deben ser elementos por default que lucirán igual en todo el sitio, es .
+-ningún estilo de estos elementos selectores deberá usar !important.
+-no usar selectores tipo class o id.
+*/
+
+	
+a
+	text-decoration none
+	
+	&:hover
+		text-decoration underline
+		
+	img
+		border 0
+	
+body
+	color $gris
+	font-size 1.3em	
+
+h1
+	color $blanco
+	font-family $bold
+	text-transform uppercase
+
+h2
+	color $grisoscuro
+	font-family $bold
+	margin-bottom 0
+	text-transform uppercase
+h3
+	color $gris
+	display inline-block 
+	font-family $light
+	margin 0 5px 0 0
+	text-transform uppercase
+	width auto
+
+h4
+	color $grisoscuro
+	font-family $bold
+	font-size 3rem
+	margin 0
+	text-align center
+	text-transform uppercase
+
+hr
+	border-color $negro
+
+header
+	background $negro
+	height 93px
+	padding 15px
+
+footer
+	background $negro
+	height 50px
+	left 0
+	padding-top 12px
+	position absolute
+	text-align right
+	width 100%
+	
+	div.row
+		margin 0
+nav
+	margin-top 10px
+	text-align center
+
+hr
+	margin 20px 0
+
+table
+	thead
+		color $negro
+		font-family $bold
+		text-transform uppercase
+		
+		th
+			border-bottom 1px solid $negro
+			text-align center
+		
+			&.accion-corta
+				width 30%
+			
+			&.accion-larga
+				width 15%
+			
+
+	
+	tbody
+		font-family $light
+		
+		tr
+			td
+				border-top 1px dotted $gris
+				position relative
+				text-align center
+			
+				&.accion-corta
+					width 30%
+				
+				//&.accion-archivos
+					//width 15%
+					
+				&.accion-larga
+					width 15%
+				
+				&.tipo-img
+					width 4%
+				
+				
+				figure
+					border 1px solid $magenta
+					display inherit
+					height 40px
+					width 50px
+					
+					img
+						width 100%
+
+p
+	font-family $light
+	text-align justify
+
+section
+	
+	&.alto-page
+		height 62vh
+		overflow-y scroll
+	
+	&#inter-login, &#inter-recuperar
+		margin-bottom 50px
+		margin-top 100px
+	
+	
+.cont-contenido-detalle
+	margin-top 20px
+
+.img-responsive
+	width 100%
+
+.clear
+	clear both	
+
+label,
+input
+	background transparent
