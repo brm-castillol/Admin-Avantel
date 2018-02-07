@@ -4,25 +4,25 @@ extends ../templates/base.pug
 //-Etiqueta Title
 block title
 	-var interna = 'archivos';
-	title Ejemplo de meta title
+	title Archivos
 
 //-Etiqueta Metadescription
 block description
-	meta(name="description", content="Frontend BRM" )
+	meta(name="archivos", content="Archivos" )
 
 
 block content
-	section.container-fluid
-		div.row
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
 			include ../templates/partials/menu.pug
 
-
+	div.clear
 	section.container-fluid.alto-page
 		//-Nombre Usuario
 		div.row
 			include ../templates/partials/header-user.pug
 		//-Contenedor
-		div.row
+		div.row.cont-contenido-general
 			//-Titulos
 			article.col-general
 				div.cont-titulos-generales
@@ -125,10 +125,7 @@ block content
 						a(href="crear-archivo.html").btn-crear-general
 							span.glyphicon.glyphicon-plus
 							</br>Crear archivos
-
-
-
-		
+							
 				//-Volver
 		div.row
 			div.cont-btn-volver

@@ -3,16 +3,17 @@ extends ../templates/base.pug
 
 //-Etiqueta Title
 block title
-	title Ejemplo de meta title
+	-var interna = 'seccion';
+	title Configurar Sección
 
 //-Etiqueta Metadescription
 block description
-	meta(name="description", content="Frontend BRM" )
+	meta(name="configurarSeccion", content="Configurar Seccion" )
 
 
 block content
-	section.container-fluid
-		div.row
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
 			include ../templates/partials/menu.pug
 
 
@@ -181,23 +182,21 @@ block content
 
 									a(href="")
 										span.glyphicon.glyphicon-remove
-
-
-
-
-
-
-
-
-					//-Formulario
-					
-		
-				//-Volver
+		//-Volver
 		div.row
 			div.cont-btn-volver
 				a(href="secciones.html").btn-volver-general
 					span.glyphicon.glyphicon-chevron-left
 					</br>volver
+
+		//- VALIDATE
+		div.cont-message-feedback.success
+			a.btn-close-feed(href="#")
+				span.glyphicon.glyphicon-remove
+
+			p.text-feedback
+				|Registro exitoso
+
 
 
 block Scripts

@@ -3,16 +3,17 @@ extends ../templates/base.pug
 
 //-Etiqueta Title
 block title
-	title Ejemplo de meta title
+	-var interna = 'menu';
+	title Crear Menú
 
 //-Etiqueta Metadescription
 block description
-	meta(name="description", content="Frontend BRM" )
+	meta(name="crearMenu", content="CrearMenu" )
 
 
 block content
-	section.container-fluid
-		div.row
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
 			include ../templates/partials/menu.pug
 
 
@@ -29,25 +30,28 @@ block content
 
 				//-Contenido
 				div.cont-contenido-detalle
-
-					div.col-contenido
-						form(method="POST")
+					form(method="POST")
+						div.col-contenido
 							div.form-group.cont-form-nombre
 								input(type="text" required)
 								label(for="nombre-modulo")
 									|Nombre
 
+							div.form-group.cont-form-nombre
+								select(type="text" required)
+									option(value="holi")
+										|Menú padre
+
 							div.cont-btn-crear
 								a.btn-crear
 									span.glyphicon.glyphicon-plus
 
-					//-Formulario
-					div.col-contenido-doble(action="editar-modulo")
-						div.col-form-doble-menu.cont-menu-general
-							div.cont-numero-orden-menu.titulo-1
-								p 0-1
-							div.cont-titulo-principal-menu
-								form(method="POST")
+						//-Formulario
+						div.col-contenido-doble(action="editar-modulo")
+							div.col-form-doble-menu.cont-menu-general
+								div.cont-numero-orden-menu.titulo-1
+									p 0-1
+								div.cont-titulo-principal-menu
 									div.form-group.col-form-doble-menu
 										input(type="text" required)
 										label(for="valor-enlace")
@@ -66,146 +70,149 @@ block content
 											span.glyphicon.glyphicon-remove
 
 										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-ok
+												span.glyphicon.glyphicon-ok
 
-							div.clearfix
-							div.cont-submenu-config
-								div.cont-numero-orden-menu.titulo-2
-									p 0-0-1
-								form(method="POST")
-									div.form-group
-										input(type="text" required)
-										label(for="valor-enlace")
-											|Digite el valor de enlace
+								div.clearfix
+								div.cont-submenu-config
+									div.cont-numero-orden-menu.titulo-2
+										p 0-0-1
+									div.cont-subgroup-menu
+										div.form-group
+											input(type="text" required)
+											label(for="valor-enlace")
+												|Digite el valor de enlace
 
-									div.form-group
-										input(type="text" required)
-										label(for="nombre-modulo")
-											|Digite el enlace
+										div.form-group
+											input(type="text" required)
+											label(for="nombre-modulo")
+												|Digite el enlace
 
-									div.cont-btns-menu-interno
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-plus
+										div.cont-btns-menu-interno
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-plus
 
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-remove
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-remove
 
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-ok
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-ok
 
-							div.cont-submenu-config
-								div.cont-numero-orden-menu.titulo-2
-									p 0-0-1
-								form(method="POST")
-									div.form-group
-										input(type="text" required)
-										label(for="valor-enlace")
-											|Digite el valor de enlace
+								div.cont-submenu-config
+									div.cont-numero-orden-menu.titulo-2
+										p 0-0-1
+									div.cont-subgroup-menu
+										div.form-group
+											input(type="text" required)
+											label(for="valor-enlace")
+												|Digite el valor de enlace
 
-									div.form-group
-										input(type="text" required)
-										label(for="nombre-modulo")
-											|Digite el enlace
+										div.form-group
+											input(type="text" required)
+											label(for="nombre-modulo")
+												|Digite el enlace
 
-									div.cont-btns-menu-interno
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-plus
+										div.cont-btns-menu-interno
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-plus
 
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-remove
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-remove
 
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-ok
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-ok
 
-						div.col-form-doble-menu.cont-menu-general
-							div.cont-numero-orden-menu.titulo-1
-								p 0-1
-							div.cont-titulo-principal-menu
-								form(method="POST")
-									div.form-group.col-form-doble-menu
-										input(type="text" required)
-										label(for="valor-enlace")
-											|Digite el valor de enlace
+							div.col-form-doble-menu.cont-menu-general
+								div.cont-numero-orden-menu.titulo-1
+									p 0-1
+								div.cont-titulo-principal-menu
+									div.cont-subgroup-menu
+										div.form-group.col-form-doble-menu
+											input(type="text" required)
+											label(for="valor-enlace")
+												|Digite el valor de enlace
 
-									div.form-group.col-form-doble-menu
-										input(type="text" required)
-										label(for="nombre-modulo")
-											|Digite el enlace
-									div.clearfix
-									div.cont-btns-menu-interno
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-plus
+										div.form-group.col-form-doble-menu
+											input(type="text" required)
+											label(for="nombre-modulo")
+												|Digite el enlace
+										div.clearfix
+										div.cont-btns-menu-interno
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-plus
 
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-remove
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-remove
 
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-ok
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-ok
 
-							div.clearfix
-							div.cont-submenu-config
-								div.cont-numero-orden-menu.titulo-2
-									p 0-0-1
-								form(method="POST")
-									div.form-group
-										input(type="text" required)
-										label(for="valor-enlace")
-											|Digite el valor de enlace
+								div.clearfix
+								div.cont-submenu-config
+									div.cont-numero-orden-menu.titulo-2
+										p 0-0-1
+									div.cont-subgroup-menu
+										div.form-group
+											input(type="text" required)
+											label(for="valor-enlace")
+												|Digite el valor de enlace
 
-									div.form-group
-										input(type="text" required)
-										label(for="nombre-modulo")
-											|Digite el enlace
+										div.form-group
+											input(type="text" required)
+											label(for="nombre-modulo")
+												|Digite el enlace
 
-									div.cont-btns-menu-interno
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-plus
+										div.cont-btns-menu-interno
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-plus
 
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-remove
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-remove
 
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-ok
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-ok
 
-							div.cont-submenu-config
-								div.cont-numero-orden-menu.titulo-2
-									p 0-0-1
-								form(method="POST")
-									div.form-group
-										input(type="text" required)
-										label(for="valor-enlace")
-											|Digite el valor de enlace
+								div.cont-submenu-config
+									div.cont-numero-orden-menu.titulo-2
+										p 0-0-1
+									div.cont-subgroup-menu
+										div.form-group
+											input(type="text" required)
+											label(for="valor-enlace")
+												|Digite el valor de enlace
 
-									div.form-group
-										input(type="text" required)
-										label(for="nombre-modulo")
-											|Digite el enlace
+										div.form-group
+											input(type="text" required)
+											label(for="nombre-modulo")
+												|Digite el enlace
 
-									div.cont-btns-menu-interno
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-plus
+										div.cont-btns-menu-interno
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-plus
 
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-remove
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-remove
 
-										a(href="#").cont-icons-config
-											span.glyphicon.glyphicon-ok
-
-						
-
-						
+											a(href="#").cont-icons-config
+												span.glyphicon.glyphicon-ok
 							
-						
-						//-boton
-						button.col-btn-user.btn-general(type="submit")
-							|finalizar
+							//-boton
+							button.col-btn-user.btn-general(type="submit")
+								|finalizar
 		
-				//-Volver
+		//-Volver
 		div.row
 			div.cont-btn-volver
 				a(href="modulos.html").btn-volver-general
 					span.glyphicon.glyphicon-chevron-left
 					</br>volver
+
+		//- VALIDATE
+		div.cont-message-feedback.success(style="display:none")
+			a.btn-close-feed(href="#")
+				span.glyphicon.glyphicon-remove
+
+			p.text-feedback
+				|Registro exitoso
 
 
 block Scripts

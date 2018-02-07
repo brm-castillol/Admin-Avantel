@@ -12,8 +12,8 @@ block description
 
 
 block content
-	section.container-fluid
-		div.row
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
 			include ../templates/partials/menu.pug
 
 
@@ -45,8 +45,7 @@ block content
 									|Estado
 								th.accion-corta
 									|Acción
-								
-						
+
 						tbody
 							tr
 								td
@@ -84,10 +83,7 @@ block content
 							span.glyphicon.glyphicon-plus
 							</br>Crear contenidos
 
-
-
-		
-				//-Volver
+		//-Volver
 		div.row
 			div.cont-btn-volver
 				a(href="index.html").btn-volver-general

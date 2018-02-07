@@ -1,0 +1,100 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var interna = 'modulos';
+	title Editar Módulo
+
+//-Etiqueta Metadescription
+block description
+	meta(name="editarModulo", content="Editar Modulo" )
+
+
+block content
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
+			include ../templates/partials/menu.pug
+
+
+	section.container-fluid.alto-page
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+		//-Contenedor
+		div.row
+			//-Titulos
+			article.col-general
+				div.cont-titulos-generales
+					h4 editar planes
+
+				//-Contenido
+				div.cont-contenido-detalle
+
+					div.col-contenido
+						form(method="POST")
+							div.col-form-login
+								div.form-group
+									input(type="text" required)
+									label(for="nombre-plan")
+										|Nombre Plan
+
+					//-Formulario
+					form.col-contenido-doble(action="editar-modulo")
+						div.col-form-doble
+							div.form-group
+								input(type="text" required)
+								label(for="minutos")
+									|Minutos
+
+							div.form-group
+								input(type="text" required)
+								label(for="gb")
+									|GB
+
+							div.form-group
+								input(type="text" required)
+								label(for="sms")
+									|SMS
+
+						div.col-form-doble
+							div.form-group
+								input(type="text" required)
+								label(for="valor")
+									|Valor
+
+							div.form-group
+								input(type="text" required)
+								label(for="url")
+									|url
+
+							div.form-group
+								textarea(type="text" required)
+								label(for="descripcion")
+									|Descripcion
+								
+									
+					
+						//-boton
+						button.col-btn-user.btn-general(type="submit")
+							|editar plan
+		
+		//-Volver
+		div.row
+			div.cont-btn-volver
+				a(href="modulos.html").btn-volver-general
+					span.glyphicon.glyphicon-chevron-left
+					</br>volver
+
+		//- VALIDATE
+		div.cont-message-feedback.success(style="display:none")
+			a.btn-close-feed(href="#")
+				span.glyphicon.glyphicon-remove
+
+			p.text-feedback
+				|Registro exitoso
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

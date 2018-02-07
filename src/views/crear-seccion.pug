@@ -1,0 +1,65 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	-var interna = 'seccion';
+	title Crear sección
+
+//-Etiqueta Metadescription
+block description
+	meta(name="crearSeccion", content="Crear Seccion" )
+
+
+block content
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
+			include ../templates/partials/menu.pug
+
+
+	section.container-fluid.alto-page
+		//-Nombre Usuario
+		div.row
+			include ../templates/partials/header-user.pug
+		//-Contenedor
+		div.row
+			//-Titulos
+			article.col-general
+				div.cont-titulos-generales
+					h4 crear sección
+
+				//-Contenido
+				div.cont-contenido-detalle
+		
+					div.col-contenido
+						form(method="POST")
+							div.col-form-login
+								div.form-group
+									input(type="text" required)
+									label(for="nombre-contenido")
+										|Nombre sección
+
+										
+							//-boton
+							button.col-form-login.btn-general(type="submit")
+									|crear sección
+			
+				//-Volver
+		div.row
+			div.cont-btn-volver
+				a(href="contenidos.html").btn-volver-general
+					span.glyphicon.glyphicon-chevron-left
+					</br>volver
+
+		//- VALIDATE
+		div.cont-message-feedback.success(style="display:none")
+			a.btn-close-feed(href="#")
+				span.glyphicon.glyphicon-remove
+
+			p.text-feedback
+				|Registro exitoso
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página
+

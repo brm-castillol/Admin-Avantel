@@ -4,16 +4,16 @@ extends ../templates/base.pug
 //-Etiqueta Title
 block title
 	-var interna = 'menu';
-	title Ejemplo de meta title
+	title Menús
 
 //-Etiqueta Metadescription
 block description
-	meta(name="description", content="Frontend BRM" )
+	meta(name="menus", content="Menu" )
 
 
 block content
-	section.container-fluid
-		div.row
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
 			include ../templates/partials/menu.pug
 
 
@@ -72,11 +72,8 @@ block content
 						a(href="crear-menu.html").btn-crear-general
 							span.glyphicon.glyphicon-plus
 							</br>Crear menús
-
-
-
-		
-				//-Volver
+							
+		//-Volver
 		div.row
 			div.cont-btn-volver
 				a(href="index.html").btn-volver-general

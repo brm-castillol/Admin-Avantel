@@ -3,16 +3,17 @@ extends ../templates/base.pug
 
 //-Etiqueta Title
 block title
-	title Ejemplo de meta title
+	-var interna = 'menu';
+	title Editar Menú
 
 //-Etiqueta Metadescription
 block description
-	meta(name="description", content="Frontend BRM" )
+	meta(name="editarMenu", content="Editar Menú" )
 
 
 block content
-	section.container-fluid
-		div.row
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
 			include ../templates/partials/menu.pug
 
 
@@ -36,6 +37,12 @@ block content
 								input(type="text" required)
 								label(for="nombre-menu")
 									|Nombre
+
+							div.form-group.cont-form-nombre
+								select(type="text" required)
+									option(value="holi")
+										|Menú padre
+
 					div.clearfix
 
 					//-NIVEL-1
@@ -43,7 +50,7 @@ block content
 						h5.titulo-nivel Nivel 1
 						
 						form(method="POST")
-							div.cont-menu-nivel.grupo-1
+							div.cont-menu-nivel
 								div.form-group
 									input(type="text" required)
 									label(for="texto-menu")
@@ -59,6 +66,11 @@ block content
 									label(for="posicion-banner")
 										|Posición
 
+								div.form-group
+									input.color-select-group(type="color" required value="#ec008c")
+									label.color-label(for="posicion-banner")
+										|Seleccionar color de grupo
+
 								div.cont-btns-menu-interno
 									a(href="#").cont-icons-config
 										span.glyphicon.glyphicon-trash
@@ -66,7 +78,7 @@ block content
 									a(href="#").cont-icons-config
 										span.glyphicon.glyphicon-pencil
 
-							div.cont-menu-nivel.grupo-2
+							div.cont-menu-nivel
 								div.form-group
 									input(type="text" required)
 									label(for="texto-menu")
@@ -81,6 +93,11 @@ block content
 									input(type="text" required)
 									label(for="posicion-menu")
 										|Posición
+
+								div.form-group
+									input.color-select-group(type="color" required value="#e1fafc")
+									label.color-label(for="posicion-banner")
+										|Seleccionar color de grupo
 
 								div.cont-btns-menu-interno
 									a(href="#").cont-icons-config
@@ -89,7 +106,7 @@ block content
 									a(href="#").cont-icons-config
 										span.glyphicon.glyphicon-pencil
 							
-							div.cont-menu-nivel.grupo-3
+							div.cont-menu-nivel
 								div.form-group
 									input(type="text" required)
 									label(for="texto-menu")
@@ -104,6 +121,11 @@ block content
 									input(type="text" required)
 									label(for="posicion-menu")
 										|Posición
+										
+								div.form-group
+									input.color-select-group(type="color" required value="#bcf6fc")
+									label.color-label(for="posicion-banner")
+										|Seleccionar color de grupo
 
 								div.cont-btns-menu-interno
 									a(href="#").cont-icons-config
@@ -285,14 +307,21 @@ block content
 
 									a(href="#").cont-icons-config
 										span.glyphicon.glyphicon-pencil
-
-		
-				//-Volver
+											
+		//-Volver
 		div.row
 			div.cont-btn-volver
 				a(href="modulos.html").btn-volver-general
 					span.glyphicon.glyphicon-chevron-left
 					</br>volver
+
+		//- VALIDATE
+		div.cont-message-feedback.success(style="display:none")
+			a.btn-close-feed(href="#")
+				span.glyphicon.glyphicon-remove
+
+			p.text-feedback
+				|Registro exitoso
 
 
 block Scripts

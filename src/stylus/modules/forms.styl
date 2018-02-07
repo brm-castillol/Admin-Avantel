@@ -34,7 +34,7 @@ input
 		top -13px
 label
 	color $grisclaro
-	font-family $hair
+	font-family $light
 	font-size 1.5rem	
 	position absolute
 	top 13px
@@ -65,23 +65,57 @@ select
 	&:focus
 		outline 0
 	
-	&:after
-			position absolute
-		    border-left .25em solid transparent
-		    border-right .25em solid transparent
-		    border-top .375em solid $negro
-		    content ''
-		    height 0
-		    padding 0
-		    pointer-events none	
-		    right 0.5em
-		    top 0.75em
-		    width 0
+	// &::after
+	// 	position absolute
+	//     border-left .25em solid transparent
+	//     border-right .25em solid transparent
+	//     border-top .375em solid $negro
+	//     content ''
+	//     height 0
+	//     padding 0
+	//     pointer-events none	
+	//     right 0.5em
+	//     top 0.75em
+	//     width 0
 			
 .cont-select
 	position relative
 	
-	        
-	select
-		appearance none
+
+textarea
+	gradient-vertical($blanco, $magenta, 0, 100%) 
+	background-position -500px bottom
+	background-repeat no-repeat
+	background-size 100% 2px
+	border none
+	border-bottom 1px solid $grisclaro
+	color $gris
+	display block
+	padding 10px
+	transition all 0.4s cubic-bezier(.64,.09,.08,1)
+	width 100%
+
+	&:focus		
+		background-position 0 bottom
+		box-shadow none
+		outline 0 !important
+		outline none 0 !important
+		z-index 1
+	
+	&:focus ~ label,
+	&:valid ~ label
+		color $gris
+		font-size 1.3rem
+		top -13px
+		
+// COLOR SELECT
+input.color-select-group
+	border 0
+	width 100%
+	height 42px
+	padding 18px 0 0
+
+label.color-label
+	margin-top 10px
+	
 			

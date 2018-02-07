@@ -1,3 +1,11 @@
+header
+	position fixed
+	width 100%
+	z-index 1
+	
+nav.bar
+	margin 0
+	
 .col-logo
 	display inline-block
 	max-width 14rem
@@ -13,9 +21,9 @@
 
 //Menu
 .cont-menu-admin
-	margin-top 36px
 	
 	li
+		background $blanco
 		display inline-block
 		height 70px
 		margin-right 12px
@@ -52,8 +60,37 @@
 			a
 				color $blanco
 				border 1px solid $magenta
-				
 			
+			.cont-svg-icons-menu
+				svg
+					fill $blanco !important
+
+// MENU INTERNAS
+
+.cont-menu-internas
+	height 120px
+	position relative
+	top 100px
+	width 100%
+	z-index 1
+	
+	.col-row-menu
+		display inline-block
+		margin 0
+	
+	.menu-deskt-internas
+		left 30%
+		position fixed
+
+.cont-svg-icons-menu
+	width 46px
+	margin 0 auto
+	
+	svg
+		
+		&:hover
+			fill $blanco !important
+	
 			
 				
 		

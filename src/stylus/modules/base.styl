@@ -16,7 +16,8 @@ a
 	
 body
 	color $gris
-	font-size 1.3em	
+	font-size 1.3em
+	font-family $regular	
 
 h1
 	color $blanco
@@ -44,6 +45,15 @@ h4
 	text-align center
 	text-transform uppercase
 
+strong
+	font-family $bold
+
+em
+	font-family $italic
+
+b, i
+	font-family $regular
+	
 hr
 	border-color $negro
 
@@ -125,13 +135,8 @@ p
 
 section
 	
-	&.alto-page
-		height 62vh
-		overflow-y scroll
-	
 	&#inter-login, &#inter-recuperar
 		margin-bottom 50px
-		margin-top 100px
 	
 	
 .cont-contenido-detalle

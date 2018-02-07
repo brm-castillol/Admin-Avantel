@@ -1,31 +1,38 @@
 //Menu
-div.col-desktop-grande
+div.col-desktop-grande.menu-deskt-internas
 	nav.bar
 		ul#navegacion.cont-menu-admin
 				li(class={active: interna== 'usuarios'})
-					a(href="#")
-						span.glyphicon.glyphicon-user
+					a(href="usuarios.html")
+						div.cont-svg-icons-menu
+							include ../../../publication/images/icons/icon-users.svg
 						|Usuarios
 				li(class={active: interna== 'modulos'})
 					a(href="modulos.html")
-						span.glyphicon.glyphicon-envelope
+						div.cont-svg-icons-menu
+							include ../../../publication/images/icons/icon-modules.svg
 						|Módulos
 				li(class={active: interna== 'menu'})
 					a(href="menu.html")
-						span.glyphicon.glyphicon-menu-hamburger
-						</br>Menú
+						div.cont-svg-icons-menu
+							include ../../../publication/images/icons/icon-menu.svg
+						|Menú
 				li(class={active: interna== 'contenidos'})
 					a(href="contenidos.html")
-						span.glyphicon.glyphicon-list-alt
+						div.cont-svg-icons-menu
+							include ../../../publication/images/icons/icon-content.svg
 						|Contenidos
 				li(class={active: interna== 'archivos'})
 					a(href="archivos.html")
-						span.glyphicon.glyphicon-inbox
+						div.cont-svg-icons-menu
+							include ../../../publication/images/icons/icon-file.svg
+
 						|Archivos
 				li(class={active: interna== 'seccion'})
 					a(href="secciones.html")
-						span.glyphicon.glyphicon-th-list
-						</br>Sección
+						div.cont-svg-icons-menu
+							include ../../../publication/images/icons/icon-section.svg 
+						|Sección
 
 				
 ///-Menu

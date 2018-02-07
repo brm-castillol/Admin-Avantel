@@ -11,8 +11,8 @@ block description
 
 
 block content
-	section.container-fluid
-		div.row
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
 			include ../templates/partials/menu.pug
 
 
@@ -43,12 +43,20 @@ block content
 							button.col-form-login.btn-general(type="submit")
 									|crear contenido
 			
-				//-Volver
+		//-Volver
 		div.row
 			div.cont-btn-volver
 				a(href="contenidos.html").btn-volver-general
 					span.glyphicon.glyphicon-chevron-left
 					</br>volver
+
+		//- VALIDATE
+		div.cont-message-feedback.success(style="display:none")
+			a.btn-close-feed(href="#")
+				span.glyphicon.glyphicon-remove
+
+			p.text-feedback
+				|Registro exitoso
 
 
 block Scripts

@@ -4,16 +4,16 @@ extends ../templates/base.pug
 //-Etiqueta Title
 block title
 	-var interna = 'modulos';
-	title Ejemplo de meta title
+	title Módulos
 
 //-Etiqueta Metadescription
 block description
-	meta(name="description", content="Frontend BRM" )
+	meta(name="modulos", content="Modulos" )
 
 
 block content
-	section.container-fluid
-		div.row
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
 			include ../templates/partials/menu.pug
 
 
@@ -39,9 +39,7 @@ block content
 									|Estado
 
 								th.accion-corta
-									|Acción
-								
-						
+									|Acción		
 						tbody
 							tr
 								td
@@ -50,7 +48,7 @@ block content
 									|Julian
 								td.accion-corta
 									div.cont-iconos-accion
-										a
+										a(href="planes.html")
 											span.glyphicon.glyphicon-cog
 										a
 											span.glyphicon.glyphicon-trash
@@ -80,11 +78,8 @@ block content
 						a(href="crear-modulo.html").btn-crear-general
 							span.glyphicon.glyphicon-plus
 							</br>Crear módulos
-
-
-
-		
-				//-Volver
+							
+		//-Volver
 		div.row
 			div.cont-btn-volver
 				a(href="index.html").btn-volver-general

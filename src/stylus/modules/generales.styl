@@ -101,23 +101,43 @@
 	text-align center
 	width 60px
 	
-	a.btn-destacar
-		color $gris
+	a.btn-destacar,
+	a.btn-guarda
 		font-size 1rem
 		text-decoration none
 		text-transform uppercase
 		
 		span.glyphicon
-			color $gris
 			font-size 2rem !important
+			
+		
+		p.text-destacar
+			text-align center
+	
+	a.btn-guarda
+		color $azul
+		
+		span.glyphicon
+			color $azul
+			
+			&:hover, &:active, &:focus 
+				color $magenta
+			
+		&:hover, &:active, &:focus 
+				color $magenta
+	
+	a.btn-destacar
+		color $gris
+		
+		span.glyphicon
+			color $gris
 			
 			&:hover, &:active, &:focus 
 				color $magenta
 		
-		p.text-destacar
-			text-align center
-
-
+		&:hover, &:active, &:focus 
+				color $magenta
+				
 /*ConfinurarSeccion*/
 
 .cont-titulo-seccion
@@ -185,9 +205,6 @@
 	margin-right 8px
 	width 80%
 	
-.cont-btn-crear
-	padding-top 6px
-
 .cont-numero-orden-menu
 	background $blanco
 	color $gris
@@ -239,7 +256,7 @@
 	border 1px dotted $grisclaro
 	float left
 	margin 10px 10px 0 10px
-	padding 8px
+	padding 34px 8px 8px
 	position relative
 	width 45%
 
@@ -278,6 +295,7 @@ h5.titulo-nivel
 .cont-menu-nivel
 	padding 30px 10px 30px
 	margin-bottom 20px
+	border-bottom 1px solid
 	
 .grupo-1
 	background $magenta-cla
@@ -289,7 +307,8 @@ h5.titulo-nivel
 .grupo-3
 	background $azul-cla
 
-
+.alto-page
+	padding-top 90px
 
 /*EDITOR*/
 
@@ -302,8 +321,41 @@ h5.titulo-nivel
 
 /*si*/
 
-#mceu_78-body {
+#mceu_78-body 
 	display none
-}
+
+// FEEDBACK
+
+.cont-message-feedback
+	border-radius 10px
+	bottom 10%
+	box-shadow 0px 0px 6px 0px $grisclaro
+	left 26%	
+	padding 20px
+	position absolute
+	width 50%
+
+a.btn-close-feed
+	float right
+	color $blanco
+	font-size 2rem
+	
+	&:hover
+		color $grisclaro
+
+p.text-feedback
+	color $blanco	
+	font-family $bold
+	font-size 2.6rem
+	margin 0
+	text-align center
+	text-transform uppercase
+	width 100%
+
+.success
+	background $verde
+
+.unsuccess
+	background $rojo
 			
 			

@@ -4,16 +4,16 @@ extends ../templates/base.pug
 //-Etiqueta Title
 block title
 	-var interna = 'usuarios';
-	title Ejemplo de meta title
+	title Usuarios
 
 //-Etiqueta Metadescription
 block description
-	meta(name="description", content="Frontend BRM" )
+	meta(name="usuarios", content="Usuarios" )
 
 
 block content
-	section.container-fluid
-		div.row
+	section.container-fluid.cont-menu-internas
+		div.row.col-row-menu
 			include ../templates/partials/menu.pug
 
 
@@ -100,10 +100,7 @@ block content
 							span.glyphicon.glyphicon-plus
 							</br>Crear usuarios
 
-
-
-		
-				//-Volver
+		//-Volver
 		div.row
 			div.cont-btn-volver
 				a(href="index.html").btn-volver-general
